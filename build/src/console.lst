@@ -1,0 +1,177 @@
+GAS LISTING /tmp/cc3BNIUg.s 			page 1
+
+
+   1              		.file	"console.cpp"
+   2              		.option pic
+   3              		.option norelax
+   4              		.text
+   5              	.Ltext0:
+   6              		.align	2
+   7              		.globl	_ZN7Console4getcEv
+   9              	_ZN7Console4getcEv:
+  10              	.LFB11:
+  11              		.file 1 "src/console.cpp"
+   1:src/console.cpp **** #include "../h/console.hpp"
+   2:src/console.cpp **** 
+   3:src/console.cpp **** 
+   4:src/console.cpp **** char Console::getc () {
+  12              		.loc 1 4 23
+  13              		.cfi_startproc
+  14 0000 130101FF 		addi	sp,sp,-16
+  15              		.cfi_def_cfa_offset 16
+  16 0004 23341100 		sd	ra,8(sp)
+  17 0008 23308100 		sd	s0,0(sp)
+  18              		.cfi_offset 1, -8
+  19              		.cfi_offset 8, -16
+  20 000c 13040101 		addi	s0,sp,16
+  21              		.cfi_def_cfa 8, 0
+   5:src/console.cpp ****     char c = ::getc();
+  22              		.loc 1 5 5
+  23              		.loc 1 5 20 is_stmt 0
+  24 0010 97000000 		call	_Z4getcv@plt
+  24      E7800000 
+  25              	.LVL0:
+   6:src/console.cpp ****     return c;
+  26              		.loc 1 6 5 is_stmt 1
+   7:src/console.cpp **** }
+  27              		.loc 1 7 1 is_stmt 0
+  28 0018 83308100 		ld	ra,8(sp)
+  29              		.cfi_restore 1
+  30 001c 03340100 		ld	s0,0(sp)
+  31              		.cfi_restore 8
+  32              		.cfi_def_cfa 2, 16
+  33 0020 13010101 		addi	sp,sp,16
+  34              		.cfi_def_cfa_offset 0
+  35 0024 67800000 		jr	ra
+  36              		.cfi_endproc
+  37              	.LFE11:
+  39              		.align	2
+  40              		.globl	_ZN7Console4putcEc
+  42              	_ZN7Console4putcEc:
+  43              	.LFB12:
+   8:src/console.cpp **** 
+   9:src/console.cpp **** void Console::putc (char c) {
+  44              		.loc 1 9 29 is_stmt 1
+  45              		.cfi_startproc
+  46              	.LVL1:
+  47 0028 130101FF 		addi	sp,sp,-16
+  48              		.cfi_def_cfa_offset 16
+  49 002c 23341100 		sd	ra,8(sp)
+  50 0030 23308100 		sd	s0,0(sp)
+GAS LISTING /tmp/cc3BNIUg.s 			page 2
+
+
+  51              		.cfi_offset 1, -8
+  52              		.cfi_offset 8, -16
+  53 0034 13040101 		addi	s0,sp,16
+  54              		.cfi_def_cfa 8, 0
+  10:src/console.cpp ****     ::putc(c);
+  55              		.loc 1 10 5
+  56              		.loc 1 10 11 is_stmt 0
+  57 0038 97000000 		call	_Z4putcc@plt
+  57      E7800000 
+  58              	.LVL2:
+  11:src/console.cpp **** }...
+  59              		.loc 1 11 1
+  60 0040 83308100 		ld	ra,8(sp)
+  61              		.cfi_restore 1
+  62 0044 03340100 		ld	s0,0(sp)
+  63              		.cfi_restore 8
+  64              		.cfi_def_cfa 2, 16
+  65 0048 13010101 		addi	sp,sp,16
+  66              		.cfi_def_cfa_offset 0
+  67 004c 67800000 		jr	ra
+  68              		.cfi_endproc
+  69              	.LFE12:
+  71              	.Letext0:
+  72              		.file 2 "src/../h/../lib/hw.h"
+  73              		.file 3 "src/../h/consoleKernel.hpp"
+  74              		.file 4 "src/../h/syscall_c.h"
+  75              		.file 5 "src/../h/console.hpp"
+GAS LISTING /tmp/cc3BNIUg.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 console.cpp
+     /tmp/cc3BNIUg.s:9      .text:0000000000000000 _ZN7Console4getcEv
+     /tmp/cc3BNIUg.s:13     .text:0000000000000000 .L0 
+     /tmp/cc3BNIUg.s:14     .text:0000000000000000 .L0 
+     /tmp/cc3BNIUg.s:15     .text:0000000000000004 .L0 
+     /tmp/cc3BNIUg.s:18     .text:000000000000000c .L0 
+     /tmp/cc3BNIUg.s:19     .text:000000000000000c .L0 
+     /tmp/cc3BNIUg.s:21     .text:0000000000000010 .L0 
+     /tmp/cc3BNIUg.s:23     .text:0000000000000010 .L0 
+     /tmp/cc3BNIUg.s:24     .text:0000000000000010 .L0 
+     /tmp/cc3BNIUg.s:27     .text:0000000000000018 .L0 
+     /tmp/cc3BNIUg.s:28     .text:0000000000000018 .L0 
+     /tmp/cc3BNIUg.s:29     .text:000000000000001c .L0 
+     /tmp/cc3BNIUg.s:31     .text:0000000000000020 .L0 
+     /tmp/cc3BNIUg.s:32     .text:0000000000000020 .L0 
+     /tmp/cc3BNIUg.s:34     .text:0000000000000024 .L0 
+     /tmp/cc3BNIUg.s:36     .text:0000000000000028 .L0 
+     /tmp/cc3BNIUg.s:42     .text:0000000000000028 _ZN7Console4putcEc
+     /tmp/cc3BNIUg.s:45     .text:0000000000000028 .L0 
+     /tmp/cc3BNIUg.s:47     .text:0000000000000028 .L0 
+     /tmp/cc3BNIUg.s:48     .text:000000000000002c .L0 
+     /tmp/cc3BNIUg.s:51     .text:0000000000000034 .L0 
+     /tmp/cc3BNIUg.s:52     .text:0000000000000034 .L0 
+     /tmp/cc3BNIUg.s:54     .text:0000000000000038 .L0 
+     /tmp/cc3BNIUg.s:56     .text:0000000000000038 .L0 
+     /tmp/cc3BNIUg.s:57     .text:0000000000000038 .L0 
+     /tmp/cc3BNIUg.s:60     .text:0000000000000040 .L0 
+     /tmp/cc3BNIUg.s:61     .text:0000000000000044 .L0 
+     /tmp/cc3BNIUg.s:63     .text:0000000000000048 .L0 
+     /tmp/cc3BNIUg.s:64     .text:0000000000000048 .L0 
+     /tmp/cc3BNIUg.s:66     .text:000000000000004c .L0 
+     /tmp/cc3BNIUg.s:68     .text:0000000000000050 .L0 
+     /tmp/cc3BNIUg.s:76     .text:0000000000000050 .L0 
+     /tmp/cc3BNIUg.s:308    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+     /tmp/cc3BNIUg.s:703    .debug_str:00000000000000d8 .LASF23
+     /tmp/cc3BNIUg.s:707    .debug_str:00000000000001a9 .LASF24
+     /tmp/cc3BNIUg.s:715    .debug_str:00000000000001e4 .LASF25
+     /tmp/cc3BNIUg.s:5      .text:0000000000000000 .Ltext0
+     /tmp/cc3BNIUg.s:71     .text:0000000000000050 .Letext0
+     /tmp/cc3BNIUg.s:669    .debug_line:0000000000000000 .Ldebug_line0
+     /tmp/cc3BNIUg.s:705    .debug_str:000000000000019c .LASF0
+     /tmp/cc3BNIUg.s:695    .debug_str:000000000000009d .LASF1
+     /tmp/cc3BNIUg.s:689    .debug_str:0000000000000078 .LASF2
+     /tmp/cc3BNIUg.s:677    .debug_str:0000000000000028 .LASF4
+     /tmp/cc3BNIUg.s:693    .debug_str:000000000000008b .LASF3
+     /tmp/cc3BNIUg.s:673    .debug_str:0000000000000013 .LASF5
+     /tmp/cc3BNIUg.s:671    .debug_str:0000000000000000 .LASF6
+     /tmp/cc3BNIUg.s:681    .debug_str:0000000000000045 .LASF7
+     /tmp/cc3BNIUg.s:711    .debug_str:00000000000001be .LASF8
+     /tmp/cc3BNIUg.s:675    .debug_str:000000000000001a .LASF9
+     /tmp/cc3BNIUg.s:729    .debug_str:000000000000023b .LASF10
+     /tmp/cc3BNIUg.s:685    .debug_str:000000000000005f .LASF11
+     /tmp/cc3BNIUg.s:725    .debug_str:0000000000000222 .LASF12
+     /tmp/cc3BNIUg.s:717    .debug_str:00000000000001f2 .LASF13
+     /tmp/cc3BNIUg.s:699    .debug_str:00000000000000b9 .LASF14
+     /tmp/cc3BNIUg.s:679    .debug_str:000000000000002f .LASF15
+GAS LISTING /tmp/cc3BNIUg.s 			page 4
+
+
+     /tmp/cc3BNIUg.s:713    .debug_str:00000000000001ce .LASF16
+     /tmp/cc3BNIUg.s:687    .debug_str:000000000000006e .LASF26
+     /tmp/cc3BNIUg.s:683    .debug_str:0000000000000058 .LASF17
+     /tmp/cc3BNIUg.s:719    .debug_str:0000000000000202 .LASF27
+     /tmp/cc3BNIUg.s:691    .debug_str:0000000000000086 .LASF22
+     /tmp/cc3BNIUg.s:723    .debug_str:000000000000020f .LASF28
+     /tmp/cc3BNIUg.s:721    .debug_str:000000000000020a .LASF21
+     /tmp/cc3BNIUg.s:701    .debug_str:00000000000000c5 .LASF29
+     /tmp/cc3BNIUg.s:709    .debug_str:00000000000001b9 .LASF18
+     /tmp/cc3BNIUg.s:43     .text:0000000000000028 .LFB12
+     /tmp/cc3BNIUg.s:69     .text:0000000000000050 .LFE12
+     /tmp/cc3BNIUg.s:642    .debug_loc:0000000000000000 .LLST0
+     /tmp/cc3BNIUg.s:58     .text:0000000000000040 .LVL2
+     /tmp/cc3BNIUg.s:10     .text:0000000000000000 .LFB11
+     /tmp/cc3BNIUg.s:37     .text:0000000000000028 .LFE11
+     /tmp/cc3BNIUg.s:25     .text:0000000000000018 .LVL0
+     /tmp/cc3BNIUg.s:697    .debug_str:00000000000000b0 .LASF19
+     /tmp/cc3BNIUg.s:727    .debug_str:0000000000000232 .LASF20
+     /tmp/cc3BNIUg.s:46     .text:0000000000000028 .LVL1
+     /tmp/cc3BNIUg.s:77     .debug_info:0000000000000000 .Ldebug_info0
+
+UNDEFINED SYMBOLS
+_Z4getcv
+_Z4putcc
